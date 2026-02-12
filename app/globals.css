@@ -1,9 +1,9 @@
 @import url('https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,800,900&f[]=general-sans@400,500,600&display=swap');
 
 :root {
-  --bg: #fafaf8;
-  --accent: #e8580c;
-  --dark: #111110;
+  --bg: #FDFBF7;
+  --accent: #CC6842;
+  --dark: #141413;
 }
 
 *,
@@ -55,7 +55,7 @@ a {
 
 /* ─── Selection: Quiet, not branded ────────────────── */
 ::selection {
-  background: rgba(17, 17, 16, 0.08);
+  background: rgba(20, 20, 19, 0.08);
   color: var(--dark);
 }
 

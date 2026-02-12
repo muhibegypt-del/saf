@@ -5,18 +5,18 @@
 
 export const T = {
   // Colors
-  bg: "#fafaf8",
-  surface: "#ffffff",
-  dark: "#111110",
-  darkSoft: "#1d1d1b",
-  text: "#111110",
-  textSecondary: "#6e6e6a",
-  textTertiary: "#9d9d97",
-  border: "rgba(17,17,16,0.06)",
-  borderHover: "rgba(17,17,16,0.12)",
-  borderStrong: "rgba(17,17,16,0.14)",
-  accent: "#e8580c",
-  accentSoft: "#fff3ec",
+  bg: "#FDFBF7",         // Warm Cream / Off-White
+  surface: "#FFFFFF",    // White (Cards)
+  dark: "#141413",       // Near-Black (Warm)
+  darkSoft: "#1F1E1D",   // Soft Black
+  text: "#1C1B1A",       // Body Text
+  textSecondary: "#6F6D66", // Warm Grey
+  textTertiary: "#A3A098", // Stone Grey
+  border: "#E6E2DD",     // Tan / Beige
+  borderHover: "#D1CDC7", // Darker Tan
+  borderStrong: "#C2BEB7", // Strong Structure
+  accent: "#CC6842",     // Deep Terracotta (Warm/Earthy)
+  accentSoft: "#F2E8E3", // Soft Blush / Peachy-Pink (Backgrounds)
 
   // Radii
   radius: {

@@ -11,7 +11,7 @@ export function Signup() {
         <section
             style={{
                 padding: `100px ${T.space.page}px`,
-                background: T.surface,
+                background: T.accentSoft,
                 borderTop: `1px solid ${T.borderStrong}`,
             }}
         >

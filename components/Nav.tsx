@@ -70,7 +70,7 @@ export function Nav() {
                 display: "flex",
                 justifyContent: "space-between",
                 alignItems: "center",
-                background: scrolled ? "rgba(250,250,248,0.97)" : "transparent",
+                background: scrolled ? "rgba(253, 251, 247, 0.98)" : "transparent",
                 borderBottom: scrolled
                     ? `1px solid ${T.borderStrong}`
                     : "1px solid transparent",
