@@ -55,8 +55,17 @@ export function Hero() {
                             ...fu(0.3),
                         }}
                     >
-                        I help you perfect your comms. So you&apos;re honest, clear +
-                        unmistakable.
+                        I help you perfect your comms. So you&apos;re honest, clear +{" "}
+                        <span
+                            style={{
+                                background: "linear-gradient(135deg, #CC6842 0%, #E8845C 40%, #F4A574 100%)",
+                                WebkitBackgroundClip: "text",
+                                WebkitTextFillColor: "transparent",
+                                backgroundClip: "text",
+                            }}
+                        >
+                            unmistakable.
+                        </span>
                     </h1>
                     <p
                         style={{
