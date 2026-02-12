@@ -30,7 +30,7 @@ export const T = {
   // Typography
   font: {
     display: "'Satoshi', 'SF Pro Display', -apple-system, sans-serif",
-    body: "'General Sans', 'SF Pro Text', -apple-system, sans-serif",
+    body: "'Switzer', 'SF Pro Text', -apple-system, sans-serif",
   },
 
   // Spacing

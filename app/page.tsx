@@ -9,6 +9,7 @@ import { Testimonials } from "@/components/Testimonials";
 import { Press } from "@/components/Press";
 import { Signup } from "@/components/Signup";
 import { Footer } from "@/components/Footer";
+import { ScrollProgress } from "@/components/ui";
 import { T } from "@/components/tokens";
 
 export default function Home() {
@@ -20,6 +21,7 @@ export default function Home() {
         overflowX: "hidden",
       }}
     >
+      <ScrollProgress />
       <Nav />
       <Hero />
       <LogoBar />

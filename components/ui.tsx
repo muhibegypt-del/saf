@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 import { T } from "./tokens";
-import { useReveal, useMagnetic } from "./hooks";
+import { useReveal, useMagnetic, useScrollProgress } from "./hooks";
 
 export const Reveal = ({
     children,
@@ -137,5 +137,15 @@ export function Btn({
         >
             {children}
         </a>
+    );
+}
+
+export function ScrollProgress() {
+    const progress = useScrollProgress();
+    return (
+        <div
+            className="scroll-progress"
+            style={{ transform: `scaleX(${progress})` }}
+        />
     );
 }

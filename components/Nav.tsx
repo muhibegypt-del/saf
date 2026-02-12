@@ -16,9 +16,25 @@ function NavLink({ label, href }: { label: string; href: string }) {
                 textDecoration: "none",
                 letterSpacing: "-0.01em",
                 transition: "color 0.25s",
+                position: "relative",
+                paddingBottom: 2,
             }}
         >
             {label}
+            {/* Underline draw on hover */}
+            <span
+                style={{
+                    position: "absolute",
+                    bottom: 0,
+                    left: 0,
+                    width: "100%",
+                    height: 1,
+                    background: T.text,
+                    transform: hov ? "scaleX(1)" : "scaleX(0)",
+                    transformOrigin: "left",
+                    transition: `transform 0.35s ${T.ease}`,
+                }}
+            />
         </a>
     );
 }
@@ -50,10 +66,16 @@ function NavCta() {
 
 export function Nav() {
     const [scrolled, setScrolled] = useState(false);
+    const [mounted, setMounted] = useState(false);
+
     useEffect(() => {
+        const t = setTimeout(() => setMounted(true), 100);
         const h = () => setScrolled(window.scrollY > 60);
         window.addEventListener("scroll", h, { passive: true });
-        return () => window.removeEventListener("scroll", h);
+        return () => {
+            clearTimeout(t);
+            window.removeEventListener("scroll", h);
+        };
     }, []);
 
     return (
@@ -70,22 +92,27 @@ export function Nav() {
                 display: "flex",
                 justifyContent: "space-between",
                 alignItems: "center",
-                background: scrolled ? "rgba(253, 251, 247, 0.98)" : "transparent",
+                background: scrolled ? "rgba(253, 251, 247, 0.85)" : "transparent",
+                backdropFilter: scrolled ? "blur(16px) saturate(180%)" : "none",
+                WebkitBackdropFilter: scrolled ? "blur(16px) saturate(180%)" : "none",
                 borderBottom: scrolled
                     ? `1px solid ${T.borderStrong}`
                     : "1px solid transparent",
                 transition: `all 0.4s ${T.ease}`,
+                /* Entrance animation */
+                opacity: mounted ? 1 : 0,
+                transform: mounted ? "translateY(0)" : "translateY(-20px)",
             }}
         >
             <a
                 href="/"
                 style={{
                     fontFamily: T.font.display,
-                    fontSize: 17,
-                    fontWeight: 700,
+                    fontSize: 22,
+                    fontWeight: 800,
                     color: T.text,
                     textDecoration: "none",
-                    letterSpacing: "-0.04em",
+                    letterSpacing: "-0.045em",
                 }}
             >
                 saffana.

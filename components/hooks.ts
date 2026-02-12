@@ -38,3 +38,39 @@ export function useMagnetic(strength = 0.15) {
     const onLeave = useCallback(() => setPos({ x: 0, y: 0 }), []);
     return [ref, pos, onMove, onLeave] as const;
 }
+
+export function useParallax(speed = 0.15) {
+    const ref = useRef<HTMLDivElement>(null);
+    const [offset, setOffset] = useState(0);
+    useEffect(() => {
+        const h = () => {
+            if (!ref.current) return;
+            const r = ref.current.getBoundingClientRect();
+            const center = r.top + r.height / 2;
+            const vh = window.innerHeight;
+            const delta = (center - vh / 2) * speed;
+            setOffset(delta);
+        };
+        window.addEventListener("scroll", h, { passive: true });
+        h();
+        return () => window.removeEventListener("scroll", h);
+    }, [speed]);
+    return [ref, offset] as const;
+}
+
+export function useScrollProgress() {
+    const [progress, setProgress] = useState(0);
+    useEffect(() => {
+        const h = () => {
+            const scrollTop = document.documentElement.scrollTop;
+            const scrollHeight =
+                document.documentElement.scrollHeight -
+                document.documentElement.clientHeight;
+            setProgress(scrollHeight > 0 ? scrollTop / scrollHeight : 0);
+        };
+        window.addEventListener("scroll", h, { passive: true });
+        h();
+        return () => window.removeEventListener("scroll", h);
+    }, []);
+    return progress;
+}

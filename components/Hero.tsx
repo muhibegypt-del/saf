@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
 import { T, ASSETS } from "./tokens";
 import { Tag, Btn, Arr } from "./ui";
+import { useParallax } from "./hooks";
 
 export function Hero() {
     const [loaded, setLoaded] = useState(false);
     const [linkHov, setLinkHov] = useState(false);
+    const [pRef, pOffset] = useParallax(0.08);
 
     useEffect(() => {
         const t = setTimeout(() => setLoaded(true), 200);
@@ -104,7 +106,7 @@ export function Hero() {
                     </div>
                 </div>
 
-                <div style={{ position: "relative", ...fu(0.4) }}>
+                <div ref={pRef} style={{ position: "relative", ...fu(0.4) }}>
                     <div
                         style={{
                             width: "100%",
@@ -114,6 +116,9 @@ export function Hero() {
                             overflow: "hidden",
                             border: `1px solid ${T.border}`,
                             marginLeft: "auto",
+                            transform: `translate3d(0, ${pOffset}px, 0)`,
+                            transition: "transform 0.1s linear",
+                            willChange: "transform",
                         }}
                     >
                         <img
