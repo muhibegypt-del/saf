@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { T } from "./tokens";
 
-function FooterLink({ label }: { label: string }) {
+function FooterLink({ label, href }: { label: string; href: string }) {
     const [hov, setHov] = useState(false);
     return (
         <a
-            href="#"
+            href={href}
             onMouseEnter={() => setHov(true)}
             onMouseLeave={() => setHov(false)}
             style={{
@@ -45,11 +45,16 @@ export function Footer() {
                     letterSpacing: "-0.02em",
                 }}
             >
-                saffana. © {new Date().getFullYear()}
+                mustafa briggs. &copy; {new Date().getFullYear()}
             </span>
             <div style={{ display: "flex", gap: 32 }}>
-                {["Workshops", "On-Demand", "Collaborate", "Subscribe"].map((l) => (
-                    <FooterLink key={l} label={l} />
+                {[
+                    { label: "Books", href: "#books" },
+                    { label: "Speaking", href: "#speaking" },
+                    { label: "Media", href: "#media" },
+                    { label: "Contact", href: "#contact" },
+                ].map((l) => (
+                    <FooterLink key={l.label} label={l.label} href={l.href} />
                 ))}
             </div>
         </footer>

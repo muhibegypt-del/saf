@@ -33,18 +33,17 @@ export function Statement() {
                             color: "rgba(255,255,255,0.6)",
                         }}
                     >
-                        An award-winning Comms specialist and copywriter who helps Marketing
-                        Leaders{" "}
+                        A best-selling author, historian, and lecturer who has presented at{" "}
                         <span style={{ color: "rgba(255,255,255,1)" }}>
-                            squeeze more talent out of their marketing team
+                            over 50 universities across 3 continents
                         </span>{" "}
-                        with world-class communications workshops.
+                        &mdash; uncovering the untold legacy of Islam and Black civilisation.
                     </p>
                 </Reveal>
                 <Reveal delay={0.15}>
                     <div style={{ marginTop: 44 }}>
                         <a
-                            href="/contact"
+                            href="#contact"
                             onMouseEnter={() => setCtaHov(true)}
                             onMouseLeave={() => setCtaHov(false)}
                             style={{
@@ -62,7 +61,7 @@ export function Statement() {
                                 transition: `all 0.3s ${T.ease}`,
                             }}
                         >
-                            Work with me <Arr size={14} color="#fff" />
+                            Book a speaking event <Arr size={14} color="#fff" />
                         </a>
                     </div>
                 </Reveal>

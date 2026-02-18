@@ -26,6 +26,7 @@ export function LogoBar() {
     const logos = [...ASSETS.logos, ...ASSETS.logos];
     return (
         <section
+            id="speaking"
             ref={ref}
             style={{
                 padding: "44px 0",
@@ -37,6 +38,20 @@ export function LogoBar() {
                 transition: `opacity 0.8s ${T.ease} 0.2s`,
             }}
         >
+            <p
+                style={{
+                    fontFamily: T.font.body,
+                    fontSize: 11.5,
+                    fontWeight: 600,
+                    letterSpacing: "0.12em",
+                    textTransform: "uppercase",
+                    color: T.accent,
+                    textAlign: "center",
+                    marginBottom: 24,
+                }}
+            >
+                Lectured at 50+ universities across 3 continents
+            </p>
             <div
                 style={{
                     display: "flex",
