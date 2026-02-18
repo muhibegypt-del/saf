@@ -88,6 +88,7 @@ function PressCard({
 export function Press() {
     return (
         <section
+            id="media"
             style={{
                 padding: `80px ${T.space.page}px ${T.space.section}px`,
                 maxWidth: T.space.maxW,
@@ -95,9 +96,9 @@ export function Press() {
             }}
         >
             <Reveal>
-                <Tag>In the press</Tag>
+                <Tag>In the media</Tag>
                 <H2 size={52} style={{ marginTop: 12, marginBottom: 48 }}>
-                    Press + Features.
+                    Media + Features.
                 </H2>
             </Reveal>
             <div

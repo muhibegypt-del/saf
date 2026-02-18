@@ -1,14 +1,17 @@
 import { useState } from "react";
 import { T } from "./tokens";
-import { Reveal, Tag, H2 } from "./ui";
+import { Reveal, Tag, H2, Arr } from "./ui";
 
 export function Signup() {
+    const [name, setName] = useState("");
     const [email, setEmail] = useState("");
-    const [focused, setFocused] = useState(false);
+    const [message, setMessage] = useState("");
+    const [focusedField, setFocusedField] = useState("");
     const [btnHov, setBtnHov] = useState(false);
 
     return (
         <section
+            id="contact"
             style={{
                 padding: `100px ${T.space.page}px`,
                 background: T.accentSoft,
@@ -17,9 +20,9 @@ export function Signup() {
         >
             <div style={{ maxWidth: 560, margin: "0 auto", textAlign: "center" }}>
                 <Reveal>
-                    <Tag>Free resource</Tag>
+                    <Tag>Speaking Engagements + Inquiries</Tag>
                     <H2 size={40} style={{ marginTop: 12, marginBottom: 14 }}>
-                        Get 5 tips to improve your writing now.
+                        Book Mustafa for your next event.
                     </H2>
                     <p
                         style={{
@@ -31,51 +34,91 @@ export function Signup() {
                             letterSpacing: "-0.01em",
                         }}
                     >
-                        I recorded 5 mini podcasts for you for free. They explain the top
-                        takeaways from my favourite books about writing.
+                        Available for university lectures, conferences, book readings,
+                        panel discussions, and community events worldwide.
                     </p>
                 </Reveal>
                 <Reveal delay={0.1}>
                     <div
                         style={{
                             display: "flex",
-                            gap: 10,
+                            flexDirection: "column",
+                            gap: 12,
                             maxWidth: 460,
                             margin: "0 auto",
-                            background: T.bg,
-                            borderRadius: T.radius.sm,
-                            padding: 5,
-                            border: `1.5px solid ${focused ? T.text : T.border}`,
-                            transition: `border-color 0.3s ${T.ease}`,
                         }}
                     >
                         <input
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                            onFocus={() => setFocused(true)}
-                            onBlur={() => setFocused(false)}
-                            placeholder="Your email address"
+                            value={name}
+                            onChange={(e) => setName(e.target.value)}
+                            onFocus={() => setFocusedField("name")}
+                            onBlur={() => setFocusedField("")}
+                            placeholder="Your name"
                             style={{
-                                flex: 1,
                                 fontFamily: T.font.body,
                                 fontSize: 14,
                                 fontWeight: 500,
-                                padding: "12px 18px",
-                                border: "none",
-                                background: "transparent",
+                                padding: "14px 18px",
+                                border: `1.5px solid ${focusedField === "name" ? T.text : T.border}`,
+                                borderRadius: T.radius.sm,
+                                background: T.bg,
                                 color: T.text,
                                 outline: "none",
                                 letterSpacing: "-0.01em",
+                                transition: `border-color 0.3s ${T.ease}`,
                             }}
                         />
-                        <button
+                        <input
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            onFocus={() => setFocusedField("email")}
+                            onBlur={() => setFocusedField("")}
+                            placeholder="Your email address"
+                            style={{
+                                fontFamily: T.font.body,
+                                fontSize: 14,
+                                fontWeight: 500,
+                                padding: "14px 18px",
+                                border: `1.5px solid ${focusedField === "email" ? T.text : T.border}`,
+                                borderRadius: T.radius.sm,
+                                background: T.bg,
+                                color: T.text,
+                                outline: "none",
+                                letterSpacing: "-0.01em",
+                                transition: `border-color 0.3s ${T.ease}`,
+                            }}
+                        />
+                        <textarea
+                            value={message}
+                            onChange={(e) => setMessage(e.target.value)}
+                            onFocus={() => setFocusedField("message")}
+                            onBlur={() => setFocusedField("")}
+                            placeholder="Tell us about your event (date, location, audience...)"
+                            rows={4}
+                            style={{
+                                fontFamily: T.font.body,
+                                fontSize: 14,
+                                fontWeight: 500,
+                                padding: "14px 18px",
+                                border: `1.5px solid ${focusedField === "message" ? T.text : T.border}`,
+                                borderRadius: T.radius.sm,
+                                background: T.bg,
+                                color: T.text,
+                                outline: "none",
+                                letterSpacing: "-0.01em",
+                                resize: "vertical",
+                                transition: `border-color 0.3s ${T.ease}`,
+                            }}
+                        />
+                        <a
+                            href={`mailto:bookings@mustafabriggs.com?subject=Speaking%20Inquiry%20from%20${encodeURIComponent(name)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`)}`}
                             onMouseEnter={() => setBtnHov(true)}
                             onMouseLeave={() => setBtnHov(false)}
                             style={{
                                 fontFamily: T.font.body,
-                                fontSize: 13,
+                                fontSize: 14,
                                 fontWeight: 600,
-                                padding: "12px 24px",
+                                padding: "14px 24px",
                                 background: btnHov ? T.darkSoft : T.dark,
                                 color: "#fff",
                                 border: "none",
@@ -84,10 +127,15 @@ export function Signup() {
                                 transition: `all 0.3s ${T.ease}`,
                                 whiteSpace: "nowrap",
                                 letterSpacing: "-0.01em",
+                                textDecoration: "none",
+                                display: "inline-flex",
+                                alignItems: "center",
+                                justifyContent: "center",
+                                gap: 8,
                             }}
                         >
-                            Gimme the Voicenotes
-                        </button>
+                            Send Inquiry <Arr size={14} color="#fff" />
+                        </a>
                     </div>
                     <p
                         style={{
@@ -98,8 +146,7 @@ export function Signup() {
                             letterSpacing: "-0.005em",
                         }}
                     >
-                        If it ends up in spam, mark it as safe + move it to inbox for more
-                        fun freebies!
+                        Or email directly at bookings@mustafabriggs.com
                     </p>
                 </Reveal>
             </div>

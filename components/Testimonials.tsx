@@ -164,9 +164,9 @@ export function Testimonials() {
                 }}
             >
                 <Reveal>
-                    <Tag>Testimonials</Tag>
+                    <Tag>What readers are saying</Tag>
                     <H2 size={52} style={{ marginTop: 12 }}>
-                        Kind words.
+                        Praise + Reviews.
                     </H2>
                 </Reveal>
                 <div style={{ display: "flex", gap: T.space.xs }}>

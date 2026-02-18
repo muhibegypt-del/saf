@@ -41,7 +41,7 @@ export function Hero() {
             >
                 <div>
                     <div style={{ ...fu(0.15), marginBottom: 28 }}>
-                        <Tag>Comms Strategy + Writing Workshops</Tag>
+                        <Tag>Best-Selling Author + Historian</Tag>
                     </div>
                     <h1
                         style={{
@@ -55,7 +55,7 @@ export function Hero() {
                             ...fu(0.3),
                         }}
                     >
-                        I help you perfect your comms. So you&apos;re honest, clear +{" "}
+                        Uncovering the untold history of Islam +{" "}
                         <span
                             style={{
                                 background: "linear-gradient(135deg, #CC6842 0%, #E8845C 40%, #F4A574 100%)",
@@ -64,7 +64,7 @@ export function Hero() {
                                 backgroundClip: "text",
                             }}
                         >
-                            unmistakable.
+                            Black civilisation.
                         </span>
                     </h1>
                     <p
@@ -79,9 +79,9 @@ export function Hero() {
                             ...fu(0.45),
                         }}
                     >
-                        An award-winning Comms specialist and copywriter who helps
-                        Marketing Leaders squeeze more talent out of their marketing team
-                        with world-class communications workshops.
+                        Mustafa Briggs is a best-selling author, historian, and lecturer
+                        who has presented at over 50 universities across 3 continents
+                        &mdash; from Oxford and Cambridge to Harvard and Yale.
                     </p>
                     <div
                         style={{
@@ -91,11 +91,11 @@ export function Hero() {
                             ...fu(0.55),
                         }}
                     >
-                        <Btn dark href="/contact">
-                            Work with me <Arr size={14} color="#fff" />
+                        <Btn dark href="#books">
+                            Explore books <Arr size={14} color="#fff" />
                         </Btn>
                         <a
-                            href="/workshops"
+                            href="#contact"
                             onMouseEnter={() => setLinkHov(true)}
                             onMouseLeave={() => setLinkHov(false)}
                             style={{
@@ -110,7 +110,7 @@ export function Hero() {
                                 transition: "color 0.25s",
                             }}
                         >
-                            View workshops <Arr size={12} />
+                            Book a speaking event <Arr size={12} />
                         </a>
                     </div>
                 </div>
@@ -132,7 +132,7 @@ export function Hero() {
                     >
                         <img
                             src={ASSETS.heroPhoto}
-                            alt="Saffana Monajed"
+                            alt="Mustafa Briggs"
                             style={{
                                 width: "100%",
                                 height: "100%",

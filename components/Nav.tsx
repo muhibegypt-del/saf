@@ -43,7 +43,7 @@ function NavCta() {
     const [hov, setHov] = useState(false);
     return (
         <a
-            href="/contact"
+            href="#contact"
             onMouseEnter={() => setHov(true)}
             onMouseLeave={() => setHov(false)}
             style={{
@@ -59,7 +59,7 @@ function NavCta() {
                 transition: `all 0.3s ${T.ease}`,
             }}
         >
-            Collaborate
+            Book a Speaking Event
         </a>
     );
 }
@@ -115,7 +115,7 @@ export function Nav() {
                     letterSpacing: "-0.045em",
                 }}
             >
-                saffana.
+                mustafa briggs.
             </a>
             <div style={{ display: "flex", gap: 32, alignItems: "center" }}>
                 {NAV_LINKS.map((l) => (
