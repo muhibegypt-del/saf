@@ -148,7 +148,7 @@ export function Services() {
             <div
                 style={{
                     display: "grid",
-                    gridTemplateColumns: "repeat(4, 1fr)",
+                    gridTemplateColumns: "repeat(3, 1fr)",
                     gap: T.space.sm + 4,
                 }}
             >

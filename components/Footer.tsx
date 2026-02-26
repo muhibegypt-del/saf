@@ -49,10 +49,10 @@ export function Footer() {
             </span>
             <div style={{ display: "flex", gap: 32 }}>
                 {[
+                    { label: "About", href: "#about" },
                     { label: "Books", href: "#books" },
                     { label: "Speaking", href: "#speaking" },
                     { label: "Media", href: "#media" },
-                    { label: "Contact", href: "#contact" },
                 ].map((l) => (
                     <FooterLink key={l.label} label={l.label} href={l.href} />
                 ))}

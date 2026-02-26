@@ -72,31 +72,24 @@ export const ASSETS = {
   ],
   press: [
     { img: "https://m.media-amazon.com/images/I/51Uu7EAHoSL._SL500_.jpg", label: "OnePath Network", type: "Podcast", url: "https://onepathnetwork.com/history/how-my-african-ancestors-lost-islam-and-came-back-ustadh-mustafa-briggs/" },
-    { img: "https://m.media-amazon.com/images/I/51f-CeoLTTL._SL500_.jpg", label: "The Malcolm Effect", type: "Podcast", url: "https://podcasts.apple.com/podcast/the-malcolm-effect/id1553030343" },
-    { img: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1746914585i/225517659.jpg", label: "The Michigan Daily", type: "Feature", url: "https://www.michigandaily.com/news/campus-life/dr-mustafa-briggs-talks-islam-black-history-and-malcolm-xs-legacy/" },
+    { img: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1746914585i/225517659.jpg", label: "Al Jazeera", type: "Television", url: "https://www.aljazeera.com/" },
     { img: "https://images-na.ssl-images-amazon.com/images/P/B0GNMY7ZKD.01.LZZZZZZZ.jpg", label: "Sacred Footsteps", type: "Interview", url: "https://sacredfootsteps.com/author/mustafabriggs/" },
+    { img: "https://m.media-amazon.com/images/I/51Uu7EAHoSL._SL500_.jpg", label: "University of Edinburgh", type: "Lecture", url: "https://divinity.ed.ac.uk/new-college-festival/new-college-festival-programme/mustafa-briggs" },
   ],
 };
 
 export const BOOKS = [
   {
-    title: "Beyond Bilal: Black History in Islam",
-    desc: "The pioneering Amazon #1 bestseller exploring the profound and often-overlooked connection between Islam and Black history \u2014 from the Black Prophets of the Quran to the legacy of contemporary African Islamic scholarship. Now part of the curriculum at Edinburgh University.",
+    title: "Beyond Bilal",
+    desc: "The pioneering Amazon #1 bestseller adapted from the internationally acclaimed lecture series delivered at over 50 universities worldwide. A groundbreaking exploration of overlooked Islamic history \u2014 from the earliest generations to the legacy of traditional African Islamic scholarship. Now part of the curriculum at Edinburgh University.",
     cover: "https://m.media-amazon.com/images/I/51Uu7EAHoSL._SL500_.jpg",
     cta: "Buy on Amazon",
     href: "https://www.amazon.com/Beyond-Bilal-Black-History-Islam/dp/B09RVDYCXL",
     badge: "#1 Bestseller",
   },
   {
-    title: "Beyond Bilal: Black Muslims in the East",
-    desc: "The second volume moves eastward to explore the little-discussed relationship between Africa, Asia, and the Middle East \u2014 covering Black History in the Arabian Peninsula, legendary Black heroes of pre-Islamic Arabia, and brilliant Black intellectuals of the Islamic Empires.",
-    cover: "https://m.media-amazon.com/images/I/51f-CeoLTTL._SL500_.jpg",
-    cta: "Buy on Amazon",
-    href: "https://www.amazon.com/Beyond-Bilal-Black-Muslims-East/dp/B0CLYLXB1N",
-  },
-  {
     title: "Islam & The Making of the Modern World",
-    desc: "A collection of essays challenging dominant Eurocentric narratives, illuminating pivotal moments where Muslim civilisations significantly influenced science, culture, trade, and politics. #1 Amazon bestseller in History of Islam within 48 hours of release.",
+    desc: "A collection of essays illuminating pivotal moments where Muslim civilisations significantly influenced science, culture, trade, and politics \u2014 challenging dominant narratives and revealing Islam\u2019s transformative role in shaping the modern world. #1 Amazon bestseller within 48 hours of release.",
     cover: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1746914585i/225517659.jpg",
     cta: "Buy on Amazon",
     href: "https://www.amazon.com/Islam-Making-Modern-Mustafa-Briggs/dp/B0DVQSS18M",
@@ -104,7 +97,7 @@ export const BOOKS = [
   },
   {
     title: "Taqwa: The Art of Living in Allah\u2019s Presence",
-    desc: "Adapted from his acclaimed Ramadan 2023 video series, this guide explores questions about taqwa with warmth, depth, and scholarly rigor, drawing upon Quranic verses and Prophetic narrations. A guide to reflection, comfort, and purpose.",
+    desc: "Adapted from his acclaimed Ramadan 2023 video series, this guide explores questions about taqwa with warmth, depth, and scholarly rigor \u2014 drawing upon Quranic verses and Prophetic narrations to offer a practical and spiritual guide to living with God-consciousness.",
     cover: "https://images-na.ssl-images-amazon.com/images/P/B0GNMY7ZKD.01.LZZZZZZZ.jpg",
     cta: "Buy on Amazon",
     href: "https://www.amazon.com/Taqwa-Art-Living-Allahs-Prescence/dp/B0GNMY7ZKD",
@@ -112,17 +105,17 @@ export const BOOKS = [
 ];
 
 export const TESTIMONIALS = [
-  { quote: "Beyond Bilal opened my eyes to an entire world of Black Islamic history that I never knew existed. This is essential reading for anyone seeking a fuller picture of civilisation.", name: "Amazon Reader", org: "Verified Purchase" },
-  { quote: "Mustafa Briggs has a rare gift for making rigorous scholarship accessible and deeply moving. His lectures at our university were transformative for students and faculty alike.", name: "University Lecturer", org: "Islamic Studies Department" },
+  { quote: "Beyond Bilal is essential reading for anyone who wants to understand the full breadth of Islamic history. Shaykh Mustafa uncovers what centuries of neglect have buried.", name: "Amazon Reader", org: "Verified Purchase" },
+  { quote: "Shaykh Mustafa has a rare gift for making rigorous, classically grounded scholarship accessible and deeply moving. His lectures at our university were transformative for students and faculty alike.", name: "University Lecturer", org: "Islamic Studies Department" },
   { quote: "I have attended lectures at over a dozen universities and none have captivated an audience quite like Mustafa. His storytelling brings history to life in the most extraordinary way.", name: "Event Organiser", org: "University Islamic Society" },
-  { quote: "Islam & The Making of the Modern World is a masterclass in reclaiming narratives. Briggs challenges Eurocentrism with evidence, clarity, and an unmistakable passion for truth.", name: "Goodreads Reader", org: "5-Star Review" },
+  { quote: "Islam & The Making of the Modern World is a masterclass in reclaiming narratives. Briggs writes with evidence, clarity, and an unmistakable passion for historical truth.", name: "Goodreads Reader", org: "5-Star Review" },
   { quote: "Taqwa changed the way I approach my daily life. It is equal parts scholarly and spiritual \u2014 the kind of book you keep on your bedside table and return to again and again.", name: "Amazon Reader", org: "Verified Purchase" },
-  { quote: "From Oxford to Harvard, Mustafa\u2019s Beyond Bilal lecture series has become a must-attend event. His ability to connect centuries of history to our present moment is unmatched.", name: "Student Attendee", org: "Beyond Bilal World Tour" },
+  { quote: "From Oxford to Harvard, the Beyond Bilal lecture series has become a must-attend event. Shaykh Mustafa\u2019s ability to connect centuries of history to our present moment is unmatched.", name: "Student Attendee", org: "Beyond Bilal World Tour" },
 ];
 
 export const NAV_LINKS = [
+  { label: "About", href: "#about" },
   { label: "Books", href: "#books" },
   { label: "Speaking", href: "#speaking" },
   { label: "Media", href: "#media" },
-  { label: "Contact", href: "#contact" },
 ];

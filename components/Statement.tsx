@@ -1,10 +1,7 @@
-import { useState } from "react";
 import { T } from "./tokens";
 import { Reveal, Arr } from "./ui";
 
 export function Statement() {
-    const [ctaHov, setCtaHov] = useState(false);
-
     return (
         <section
             style={{
@@ -33,35 +30,33 @@ export function Statement() {
                             color: "rgba(255,255,255,0.6)",
                         }}
                     >
-                        A best-selling author, historian, and lecturer who has presented at{" "}
+                        A classically trained Islamic scholar bringing{" "}
                         <span style={{ color: "rgba(255,255,255,1)" }}>
-                            over 50 universities across 3 continents
+                            overlooked histories back to light
                         </span>{" "}
-                        &mdash; uncovering the untold legacy of Islam and Black civilisation.
+                        &mdash; combining traditional scholarship with academic rigour
+                        across over 50 universities on 3 continents.
                     </p>
                 </Reveal>
                 <Reveal delay={0.15}>
                     <div style={{ marginTop: 44 }}>
                         <a
-                            href="#contact"
-                            onMouseEnter={() => setCtaHov(true)}
-                            onMouseLeave={() => setCtaHov(false)}
+                            href="#books"
                             style={{
                                 fontFamily: T.font.body,
                                 fontSize: 14,
                                 fontWeight: 600,
-                                color: "#fff",
-                                padding: "14px 28px",
-                                borderRadius: T.radius.full,
-                                border: `1.5px solid ${ctaHov ? "rgba(255,255,255,0.6)" : "rgba(255,255,255,0.25)"}`,
+                                color: "rgba(255,255,255,0.5)",
                                 display: "inline-flex",
                                 alignItems: "center",
                                 gap: 8,
                                 textDecoration: "none",
-                                transition: `all 0.3s ${T.ease}`,
+                                transition: `color 0.3s ${T.ease}`,
                             }}
+                            onMouseEnter={(e) => (e.currentTarget.style.color = "rgba(255,255,255,0.8)")}
+                            onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(255,255,255,0.5)")}
                         >
-                            Book a speaking event <Arr size={14} color="#fff" />
+                            Explore his works <Arr size={14} color="currentColor" />
                         </a>
                     </div>
                 </Reveal>

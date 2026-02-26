@@ -21,7 +21,6 @@ function NavLink({ label, href }: { label: string; href: string }) {
             }}
         >
             {label}
-            {/* Underline draw on hover */}
             <span
                 style={{
                     position: "absolute",
@@ -35,31 +34,6 @@ function NavLink({ label, href }: { label: string; href: string }) {
                     transition: `transform 0.35s ${T.ease}`,
                 }}
             />
-        </a>
-    );
-}
-
-function NavCta() {
-    const [hov, setHov] = useState(false);
-    return (
-        <a
-            href="#contact"
-            onMouseEnter={() => setHov(true)}
-            onMouseLeave={() => setHov(false)}
-            style={{
-                fontFamily: T.font.body,
-                fontSize: 13,
-                fontWeight: 600,
-                color: T.text,
-                background: "transparent",
-                padding: "9px 20px",
-                borderRadius: T.radius.full,
-                border: `1.5px solid ${hov ? T.text : T.borderHover}`,
-                textDecoration: "none",
-                transition: `all 0.3s ${T.ease}`,
-            }}
-        >
-            Book a Speaking Event
         </a>
     );
 }
@@ -99,7 +73,6 @@ export function Nav() {
                     ? `1px solid ${T.borderStrong}`
                     : "1px solid transparent",
                 transition: `all 0.4s ${T.ease}`,
-                /* Entrance animation */
                 opacity: mounted ? 1 : 0,
                 transform: mounted ? "translateY(0)" : "translateY(-20px)",
             }}
@@ -121,7 +94,6 @@ export function Nav() {
                 {NAV_LINKS.map((l) => (
                     <NavLink key={l.label} label={l.label} href={l.href} />
                 ))}
-                <NavCta />
             </div>
         </nav>
     );

@@ -1,153 +1,63 @@
-import { useState } from "react";
 import { T } from "./tokens";
-import { Reveal, Tag, H2, Arr } from "./ui";
+import { Reveal, Tag } from "./ui";
 
 export function Signup() {
-    const [name, setName] = useState("");
-    const [email, setEmail] = useState("");
-    const [message, setMessage] = useState("");
-    const [focusedField, setFocusedField] = useState("");
-    const [btnHov, setBtnHov] = useState(false);
-
     return (
         <section
             id="contact"
             style={{
-                padding: `100px ${T.space.page}px`,
+                padding: `80px ${T.space.page}px`,
                 background: T.accentSoft,
                 borderTop: `1px solid ${T.borderStrong}`,
             }}
         >
             <div style={{ maxWidth: 560, margin: "0 auto", textAlign: "center" }}>
                 <Reveal>
-                    <Tag>Speaking Engagements + Inquiries</Tag>
-                    <H2 size={40} style={{ marginTop: 12, marginBottom: 14 }}>
-                        Book Mustafa for your next event.
-                    </H2>
+                    <Tag>Get in Touch</Tag>
+                    <p
+                        style={{
+                            fontFamily: T.font.display,
+                            fontSize: "clamp(24px, 3vw, 34px)",
+                            fontWeight: 700,
+                            letterSpacing: "-0.03em",
+                            lineHeight: 1.2,
+                            color: T.text,
+                            marginTop: 12,
+                            marginBottom: 18,
+                        }}
+                    >
+                        Inquiries + Correspondence.
+                    </p>
                     <p
                         style={{
                             fontFamily: T.font.body,
                             fontSize: 15.5,
                             lineHeight: 1.7,
                             color: T.textSecondary,
-                            marginBottom: 36,
                             letterSpacing: "-0.01em",
+                            marginBottom: 28,
                         }}
                     >
-                        Available for university lectures, conferences, book readings,
-                        panel discussions, and community events worldwide.
+                        For speaking engagements, media inquiries, collaborations,
+                        or general correspondence.
                     </p>
-                </Reveal>
-                <Reveal delay={0.1}>
-                    <div
-                        style={{
-                            display: "flex",
-                            flexDirection: "column",
-                            gap: 12,
-                            maxWidth: 460,
-                            margin: "0 auto",
-                        }}
-                    >
-                        <input
-                            value={name}
-                            onChange={(e) => setName(e.target.value)}
-                            onFocus={() => setFocusedField("name")}
-                            onBlur={() => setFocusedField("")}
-                            placeholder="Your name"
-                            style={{
-                                fontFamily: T.font.body,
-                                fontSize: 14,
-                                fontWeight: 500,
-                                padding: "14px 18px",
-                                border: `1.5px solid ${focusedField === "name" ? T.text : T.border}`,
-                                borderRadius: T.radius.sm,
-                                background: T.bg,
-                                color: T.text,
-                                outline: "none",
-                                letterSpacing: "-0.01em",
-                                transition: `border-color 0.3s ${T.ease}`,
-                            }}
-                        />
-                        <input
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                            onFocus={() => setFocusedField("email")}
-                            onBlur={() => setFocusedField("")}
-                            placeholder="Your email address"
-                            style={{
-                                fontFamily: T.font.body,
-                                fontSize: 14,
-                                fontWeight: 500,
-                                padding: "14px 18px",
-                                border: `1.5px solid ${focusedField === "email" ? T.text : T.border}`,
-                                borderRadius: T.radius.sm,
-                                background: T.bg,
-                                color: T.text,
-                                outline: "none",
-                                letterSpacing: "-0.01em",
-                                transition: `border-color 0.3s ${T.ease}`,
-                            }}
-                        />
-                        <textarea
-                            value={message}
-                            onChange={(e) => setMessage(e.target.value)}
-                            onFocus={() => setFocusedField("message")}
-                            onBlur={() => setFocusedField("")}
-                            placeholder="Tell us about your event (date, location, audience...)"
-                            rows={4}
-                            style={{
-                                fontFamily: T.font.body,
-                                fontSize: 14,
-                                fontWeight: 500,
-                                padding: "14px 18px",
-                                border: `1.5px solid ${focusedField === "message" ? T.text : T.border}`,
-                                borderRadius: T.radius.sm,
-                                background: T.bg,
-                                color: T.text,
-                                outline: "none",
-                                letterSpacing: "-0.01em",
-                                resize: "vertical",
-                                transition: `border-color 0.3s ${T.ease}`,
-                            }}
-                        />
-                        <a
-                            href={`mailto:bookings@mustafabriggs.com?subject=Speaking%20Inquiry%20from%20${encodeURIComponent(name)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`)}`}
-                            onMouseEnter={() => setBtnHov(true)}
-                            onMouseLeave={() => setBtnHov(false)}
-                            style={{
-                                fontFamily: T.font.body,
-                                fontSize: 14,
-                                fontWeight: 600,
-                                padding: "14px 24px",
-                                background: btnHov ? T.darkSoft : T.dark,
-                                color: "#fff",
-                                border: "none",
-                                borderRadius: T.radius.sm,
-                                cursor: "pointer",
-                                transition: `all 0.3s ${T.ease}`,
-                                whiteSpace: "nowrap",
-                                letterSpacing: "-0.01em",
-                                textDecoration: "none",
-                                display: "inline-flex",
-                                alignItems: "center",
-                                justifyContent: "center",
-                                gap: 8,
-                            }}
-                        >
-                            Send Inquiry <Arr size={14} color="#fff" />
-                        </a>
-                    </div>
-                    <p
+                    <a
+                        href="mailto:bookings@mustafabriggs.com"
                         style={{
                             fontFamily: T.font.body,
-                            fontSize: 12,
-                            color: T.textTertiary,
-                            marginTop: 14,
-                            letterSpacing: "-0.005em",
+                            fontSize: 16,
+                            fontWeight: 600,
+                            color: T.text,
+                            textDecoration: "none",
+                            borderBottom: `1.5px solid ${T.borderStrong}`,
+                            paddingBottom: 2,
+                            transition: `border-color 0.3s ${T.ease}`,
                         }}
+                        onMouseEnter={(e) => (e.currentTarget.style.borderColor = T.text)}
+                        onMouseLeave={(e) => (e.currentTarget.style.borderColor = T.borderStrong)}
                     >
-                        Or email directly at bookings@mustafabriggs.com
-                    </p>
+                        bookings@mustafabriggs.com
+                    </a>
                 </Reveal>
             </div>
         </section>
