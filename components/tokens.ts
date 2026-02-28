@@ -93,10 +93,10 @@ export const ASSETS = {
     { name: "Al-Azhar University", url: "/logos/al-azhar.svg" },
   ],
   press: [
-    { img: "https://m.media-amazon.com/images/I/51Uu7EAHoSL._SL500_.jpg", label: "OnePath Network", type: "Podcast", url: "https://onepathnetwork.com/history/how-my-african-ancestors-lost-islam-and-came-back-ustadh-mustafa-briggs/" },
-    { img: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1746914585i/225517659.jpg", label: "Al Jazeera", type: "Television", url: "https://www.aljazeera.com/" },
-    { img: "https://images-na.ssl-images-amazon.com/images/P/B0GNMY7ZKD.01.LZZZZZZZ.jpg", label: "Sacred Footsteps", type: "Interview", url: "https://sacredfootsteps.com/author/mustafabriggs/" },
-    { img: "https://m.media-amazon.com/images/I/51Uu7EAHoSL._SL500_.jpg", label: "University of Edinburgh", type: "Lecture", url: "https://divinity.ed.ac.uk/new-college-festival/new-college-festival-programme/mustafa-briggs" },
+    { img: "https://img.youtube.com/vi/uE3pf7P2O_Q/hqdefault.jpg", label: "OnePath Network", type: "Podcast", url: "https://www.youtube.com/watch?v=uE3pf7P2O_Q" },
+    { img: "https://img.youtube.com/vi/fAcHJPxGZG8/hqdefault.jpg", label: "The Ansari Podcast", type: "Interview", url: "https://www.youtube.com/watch?v=fAcHJPxGZG8" },
+    { img: "https://img.youtube.com/vi/wvFZIz9t0jw/hqdefault.jpg", label: "IlmFeed Podcast", type: "Lecture", url: "https://www.youtube.com/watch?v=wvFZIz9t0jw" },
+    { img: "https://img.youtube.com/vi/1VZBKwvqHgM/hqdefault.jpg", label: "Mustafa Briggs", type: "Lecture", url: "https://www.youtube.com/watch?v=1VZBKwvqHgM" },
   ],
 };
 
