@@ -21,16 +21,18 @@ export function Hero() {
 
     return (
         <section
+            className="hero"
             style={{
                 minHeight: "100vh",
                 display: "flex",
                 alignItems: "center",
-                padding: `140px ${T.space.page}px 100px`,
+                padding: `${T.space.section + 20}px ${T.space.page}px ${T.space.sectionSm + 20}px`,
                 maxWidth: T.space.maxW,
                 margin: "0 auto",
             }}
         >
             <div
+                className="hero-grid"
                 style={{
                     display: "grid",
                     gridTemplateColumns: "1.15fr 0.85fr",
@@ -40,18 +42,18 @@ export function Hero() {
                 }}
             >
                 <div>
-                    <div style={{ ...fu(0.15), marginBottom: 28 }}>
+                    <div style={{ ...fu(0.15), marginBottom: T.space.md + 4 }}>
                         <Tag>Classically Trained Islamic Scholar + Author</Tag>
                     </div>
                     <h1
                         style={{
                             fontFamily: T.font.display,
-                            fontSize: "clamp(46px, 5vw, 72px)",
-                            fontWeight: 800,
-                            lineHeight: 1.04,
-                            letterSpacing: "-0.045em",
+                            fontSize: T.type.h1.size,
+                            fontWeight: T.type.h1.weight,
+                            lineHeight: T.type.h1.leading,
+                            letterSpacing: T.type.h1.tracking,
                             color: T.text,
-                            marginBottom: 28,
+                            marginBottom: T.space.md + 4,
                             ...fu(0.3),
                         }}
                     >
@@ -70,12 +72,12 @@ export function Hero() {
                     <p
                         style={{
                             fontFamily: T.font.body,
-                            fontSize: 17,
-                            lineHeight: 1.7,
+                            fontSize: T.type.body.size + 1,
+                            lineHeight: T.type.body.leading - 0.05,
                             color: T.textSecondary,
-                            maxWidth: 500,
-                            marginBottom: 40,
-                            letterSpacing: "-0.01em",
+                            maxWidth: T.space.prose - 140,
+                            marginBottom: T.space.lg - 8,
+                            letterSpacing: T.type.body.tracking,
                             ...fu(0.45),
                         }}
                     >
@@ -87,7 +89,7 @@ export function Hero() {
                     <div
                         style={{
                             display: "flex",
-                            gap: 14,
+                            gap: T.type.bodySmall.size,
                             alignItems: "center",
                             ...fu(0.55),
                         }}
@@ -101,7 +103,7 @@ export function Hero() {
                             onMouseLeave={() => setLinkHov(false)}
                             style={{
                                 fontFamily: T.font.body,
-                                fontSize: 14,
+                                fontSize: T.type.bodySmall.size,
                                 fontWeight: 500,
                                 color: linkHov ? T.text : T.textSecondary,
                                 textDecoration: "none",

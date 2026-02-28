@@ -5,13 +5,14 @@ export function Signup() {
     return (
         <section
             id="contact"
+            className="contact"
             style={{
-                padding: `80px ${T.space.page}px`,
+                padding: `${T.space.sectionSm}px ${T.space.page}px`,
                 background: T.accentSoft,
                 borderTop: `1px solid ${T.borderStrong}`,
             }}
         >
-            <div style={{ maxWidth: 560, margin: "0 auto", textAlign: "center" }}>
+            <div style={{ maxWidth: T.space.prose - 80, margin: "0 auto", textAlign: "center" }}>
                 <Reveal>
                     <Tag>Get in Touch</Tag>
                     <p
@@ -19,10 +20,10 @@ export function Signup() {
                             fontFamily: T.font.display,
                             fontSize: "clamp(24px, 3vw, 34px)",
                             fontWeight: 700,
-                            letterSpacing: "-0.03em",
-                            lineHeight: 1.2,
+                            letterSpacing: T.type.quote.tracking,
+                            lineHeight: T.type.h3.leading,
                             color: T.text,
-                            marginTop: 12,
+                            marginTop: T.space.tagGap,
                             marginBottom: 18,
                         }}
                     >
@@ -31,11 +32,11 @@ export function Signup() {
                     <p
                         style={{
                             fontFamily: T.font.body,
-                            fontSize: 15.5,
-                            lineHeight: 1.7,
+                            fontSize: T.type.body.size - 0.5,
+                            lineHeight: T.type.body.leading - 0.05,
                             color: T.textSecondary,
-                            letterSpacing: "-0.01em",
-                            marginBottom: 28,
+                            letterSpacing: T.type.body.tracking,
+                            marginBottom: T.space.md + 4,
                         }}
                     >
                         For speaking engagements, media inquiries, collaborations,
@@ -45,7 +46,7 @@ export function Signup() {
                         href="mailto:bookings@mustafabriggs.com"
                         style={{
                             fontFamily: T.font.body,
-                            fontSize: 16,
+                            fontSize: T.type.body.size,
                             fontWeight: 600,
                             color: T.text,
                             textDecoration: "none",

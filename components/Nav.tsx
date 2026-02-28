@@ -10,11 +10,11 @@ function NavLink({ label, href }: { label: string; href: string }) {
             onMouseLeave={() => setHov(false)}
             style={{
                 fontFamily: T.font.body,
-                fontSize: 13,
+                fontSize: T.type.caption.size,
                 fontWeight: 500,
                 color: hov ? T.text : T.textSecondary,
                 textDecoration: "none",
-                letterSpacing: "-0.01em",
+                letterSpacing: T.type.caption.tracking,
                 transition: "color 0.25s",
                 position: "relative",
                 paddingBottom: 2,
@@ -61,8 +61,8 @@ export function Nav() {
                 right: 0,
                 zIndex: 100,
                 padding: scrolled
-                    ? `14px ${T.space.page}px`
-                    : `20px ${T.space.page}px`,
+                    ? `${T.type.bodySmall.size}px ${T.space.page}px`
+                    : `${T.space.cardGap}px ${T.space.page}px`,
                 display: "flex",
                 justifyContent: "space-between",
                 alignItems: "center",
@@ -81,7 +81,7 @@ export function Nav() {
                 href="/"
                 style={{
                     fontFamily: T.font.display,
-                    fontSize: 22,
+                    fontSize: T.type.h3.size + 2,
                     fontWeight: 800,
                     color: T.text,
                     textDecoration: "none",
@@ -90,7 +90,7 @@ export function Nav() {
             >
                 mustafa briggs.
             </a>
-            <div style={{ display: "flex", gap: 32, alignItems: "center" }}>
+            <div className="nav-links" style={{ display: "flex", gap: T.space.md + 8, alignItems: "center" }}>
                 {NAV_LINKS.map((l) => (
                     <NavLink key={l.label} label={l.label} href={l.href} />
                 ))}

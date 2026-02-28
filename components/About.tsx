@@ -1,17 +1,11 @@
 import { T } from "./tokens";
-import { Reveal, Tag, H2 } from "./ui";
+import { Reveal, Tag, H2, Section, Prose } from "./ui";
 
 export function About() {
     return (
-        <section
-            id="about"
-            style={{
-                padding: `${T.space.section}px ${T.space.page}px`,
-                maxWidth: T.space.maxW,
-                margin: "0 auto",
-            }}
-        >
+        <Section id="about" className="about">
             <div
+                className="about-grid"
                 style={{
                     display: "grid",
                     gridTemplateColumns: "1fr 1fr",
@@ -19,67 +13,40 @@ export function About() {
                     alignItems: "start",
                 }}
             >
-                {/* Left column — header + intro */}
+                {/* Left column */}
                 <div>
                     <Reveal>
                         <Tag>Biography</Tag>
-                        <H2 size={52} style={{ marginTop: 12, marginBottom: 28 }}>
+                        <H2 style={{ marginTop: T.space.tagGap, marginBottom: T.space.md + 4 }}>
                             About Shaykh Mustafa.
                         </H2>
                     </Reveal>
                     <Reveal delay={0.1}>
-                        <p
-                            style={{
-                                fontFamily: T.font.body,
-                                fontSize: 16,
-                                lineHeight: 1.75,
-                                color: T.textSecondary,
-                                letterSpacing: "-0.01em",
-                                marginBottom: 20,
-                            }}
-                        >
+                        <Prose>
                             Shaykh Mustafa Briggs is a British Islamic scholar, historian,
                             author, and international public speaker whose work bridges
                             traditional Islamic scholarship, global history, and spiritual
                             education. Born and raised in London with West African roots,
                             he holds a BA in Arabic and International Relations from the
                             University of Westminster.
-                        </p>
+                        </Prose>
                     </Reveal>
                     <Reveal delay={0.15}>
-                        <p
-                            style={{
-                                fontFamily: T.font.body,
-                                fontSize: 16,
-                                lineHeight: 1.75,
-                                color: T.textSecondary,
-                                letterSpacing: "-0.01em",
-                                marginBottom: 20,
-                            }}
-                        >
+                        <Prose>
                             He later pursued postgraduate study in Arabic and Islamic
                             translation at SOAS, University of London, and continued
                             advanced studies in Islamic sciences at Al-Azhar University
                             in Cairo. Alongside formal study, he has trained with scholars
                             across Africa and the Middle East, receiving multiple ij&#257;z&#257;t
                             in classical Islamic disciplines.
-                        </p>
+                        </Prose>
                     </Reveal>
                 </div>
 
-                {/* Right column — achievements + continued bio */}
+                {/* Right column */}
                 <div>
                     <Reveal delay={0.1}>
-                        <p
-                            style={{
-                                fontFamily: T.font.body,
-                                fontSize: 16,
-                                lineHeight: 1.75,
-                                color: T.textSecondary,
-                                letterSpacing: "-0.01em",
-                                marginBottom: 20,
-                            }}
-                        >
+                        <Prose>
                             He is a three-time author, with two books reaching #1
                             bestseller status on Amazon. His works include{" "}
                             <em style={{ color: T.text, fontWeight: 500 }}>Beyond Bilal</em>
@@ -96,19 +63,10 @@ export function About() {
                             </em>
                             {" "}&mdash; a practical and spiritual guide to living with
                             God-consciousness, adapted from his 2023 Ramadan series.
-                        </p>
+                        </Prose>
                     </Reveal>
                     <Reveal delay={0.15}>
-                        <p
-                            style={{
-                                fontFamily: T.font.body,
-                                fontSize: 16,
-                                lineHeight: 1.75,
-                                color: T.textSecondary,
-                                letterSpacing: "-0.01em",
-                                marginBottom: 20,
-                            }}
-                        >
+                        <Prose>
                             Mustafa is widely recognised for his lectures, writings, and
                             educational initiatives that highlight overlooked histories,
                             particularly those of African scholars and civilisations within
@@ -116,16 +74,16 @@ export function About() {
                             internationally, combining academic insight with traditional
                             scholarship to make Islamic knowledge accessible to contemporary
                             audiences.
-                        </p>
+                        </Prose>
                     </Reveal>
-                    {/* Credentials highlight */}
                     <Reveal delay={0.2}>
                         <div
+                            className="stats-grid"
                             style={{
                                 display: "grid",
                                 gridTemplateColumns: "1fr 1fr",
-                                gap: 16,
-                                marginTop: 12,
+                                gap: T.space.sm,
+                                marginTop: T.space.tagGap,
                             }}
                         >
                             {[
@@ -137,7 +95,7 @@ export function About() {
                                 <div
                                     key={s.label}
                                     style={{
-                                        padding: "20px 0",
+                                        padding: `${T.space.cardGap}px 0`,
                                         borderTop: `1px solid ${T.border}`,
                                     }}
                                 >
@@ -156,7 +114,7 @@ export function About() {
                                     <span
                                         style={{
                                             fontFamily: T.font.body,
-                                            fontSize: 12.5,
+                                            fontSize: T.type.small.size,
                                             fontWeight: 500,
                                             color: T.textTertiary,
                                             letterSpacing: "0.02em",
@@ -171,6 +129,6 @@ export function About() {
                     </Reveal>
                 </div>
             </div>
-        </section>
+        </Section>
     );
 }

@@ -2,7 +2,6 @@ import { useState, useRef, useCallback } from "react";
 import { T, TESTIMONIALS } from "./tokens";
 import { Reveal, Tag, H2 } from "./ui";
 
-/* ─── Arrow Button (extracted outside render) ─────── */
 function ArrowBtn({
     dir,
     ok,
@@ -19,8 +18,8 @@ function ArrowBtn({
             onMouseEnter={() => setHov(true)}
             onMouseLeave={() => setHov(false)}
             style={{
-                width: 44,
-                height: 44,
+                width: T.space.lg - 4,
+                height: T.space.lg - 4,
                 borderRadius: "50%",
                 cursor: ok ? "pointer" : "default",
                 background: "transparent",
@@ -51,7 +50,6 @@ function ArrowBtn({
     );
 }
 
-/* ─── Testimonial Card (extracted for clarity) ────── */
 function TestimonialCard({ t }: { t: (typeof TESTIMONIALS)[0] }) {
     const [hov, setHov] = useState(false);
     return (
@@ -75,11 +73,11 @@ function TestimonialCard({ t }: { t: (typeof TESTIMONIALS)[0] }) {
                 <span
                     style={{
                         fontFamily: T.font.display,
-                        fontSize: 48,
+                        fontSize: T.space.lg,
                         lineHeight: 1,
                         color: T.textTertiary,
                         display: "block",
-                        marginBottom: 12,
+                        marginBottom: T.space.tagGap,
                         userSelect: "none",
                     }}
                 >
@@ -88,11 +86,11 @@ function TestimonialCard({ t }: { t: (typeof TESTIMONIALS)[0] }) {
                 <blockquote
                     style={{
                         fontFamily: T.font.body,
-                        fontSize: 15.5,
-                        lineHeight: 1.65,
+                        fontSize: T.type.body.size - 0.5,
+                        lineHeight: T.type.bodySmall.leading,
                         color: T.text,
                         fontWeight: 400,
-                        letterSpacing: "-0.01em",
+                        letterSpacing: T.type.body.tracking,
                         margin: 0,
                     }}
                 >
@@ -109,11 +107,11 @@ function TestimonialCard({ t }: { t: (typeof TESTIMONIALS)[0] }) {
                 <span
                     style={{
                         fontFamily: T.font.body,
-                        fontSize: 13.5,
-                        fontWeight: 600,
+                        fontSize: T.type.caption.size + 0.5,
+                        fontWeight: T.type.caption.weight,
                         color: T.text,
                         display: "block",
-                        letterSpacing: "-0.01em",
+                        letterSpacing: T.type.caption.tracking,
                     }}
                 >
                     {t.name}
@@ -121,9 +119,9 @@ function TestimonialCard({ t }: { t: (typeof TESTIMONIALS)[0] }) {
                 <span
                     style={{
                         fontFamily: T.font.body,
-                        fontSize: 12.5,
+                        fontSize: T.type.small.size,
                         color: T.textTertiary,
-                        letterSpacing: "-0.005em",
+                        letterSpacing: T.type.small.tracking,
                     }}
                 >
                     {t.org}
@@ -133,7 +131,6 @@ function TestimonialCard({ t }: { t: (typeof TESTIMONIALS)[0] }) {
     );
 }
 
-/* ─── Testimonials Section ────────────────────────── */
 export function Testimonials() {
     const scrollRef = useRef<HTMLDivElement>(null);
     const [canL, setCanL] = useState(false);
@@ -150,8 +147,7 @@ export function Testimonials() {
         scrollRef.current?.scrollBy({ left: dir * 400, behavior: "smooth" });
 
     return (
-        <section style={{ padding: `${T.space.section}px 0` }}>
-            {/* Header — aligned to content column */}
+        <section className="testimonials" style={{ padding: `${T.space.section}px 0` }}>
             <div
                 style={{
                     padding: `0 ${T.space.page}px`,
@@ -165,7 +161,7 @@ export function Testimonials() {
             >
                 <Reveal>
                     <Tag>What readers are saying</Tag>
-                    <H2 size={52} style={{ marginTop: 12 }}>
+                    <H2 style={{ marginTop: T.space.tagGap }}>
                         Praise + Reviews.
                     </H2>
                 </Reveal>
@@ -175,10 +171,10 @@ export function Testimonials() {
                 </div>
             </div>
 
-            {/* Scroll container — with proper snap alignment */}
             <div
                 ref={scrollRef}
                 onScroll={check}
+                className="testimonials-track"
                 style={{
                     display: "flex",
                     gap: T.space.sm,

@@ -10,12 +10,12 @@ function FooterLink({ label, href }: { label: string; href: string }) {
             onMouseLeave={() => setHov(false)}
             style={{
                 fontFamily: T.font.body,
-                fontSize: 12.5,
-                fontWeight: 500,
+                fontSize: T.type.small.size,
+                fontWeight: T.type.small.weight,
                 color: hov ? T.text : T.textTertiary,
                 textDecoration: "none",
                 transition: "color 0.25s",
-                letterSpacing: "-0.01em",
+                letterSpacing: T.type.small.tracking,
             }}
         >
             {label}
@@ -27,7 +27,7 @@ export function Footer() {
     return (
         <footer
             style={{
-                padding: `28px ${T.space.page}px`,
+                padding: `${T.space.md + 4}px ${T.space.page}px`,
                 borderTop: `1px solid ${T.borderStrong}`,
                 display: "flex",
                 justifyContent: "space-between",
@@ -39,7 +39,7 @@ export function Footer() {
             <span
                 style={{
                     fontFamily: T.font.display,
-                    fontSize: 13,
+                    fontSize: T.type.caption.size,
                     fontWeight: 700,
                     color: T.textSecondary,
                     letterSpacing: "-0.02em",
@@ -47,7 +47,7 @@ export function Footer() {
             >
                 mustafa briggs. &copy; {new Date().getFullYear()}
             </span>
-            <div style={{ display: "flex", gap: 32 }}>
+            <div className="footer-links" style={{ display: "flex", gap: T.space.md + 8 }}>
                 {[
                     { label: "About", href: "#about" },
                     { label: "Books", href: "#books" },

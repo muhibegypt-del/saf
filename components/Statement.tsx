@@ -4,6 +4,7 @@ import { Reveal, Arr } from "./ui";
 export function Statement() {
     return (
         <section
+            className="statement"
             style={{
                 padding: `${T.space.section}px ${T.space.page}px`,
                 background: T.dark,
@@ -13,7 +14,7 @@ export function Statement() {
         >
             <div
                 style={{
-                    maxWidth: 900,
+                    maxWidth: T.space.proseWide,
                     margin: "0 auto",
                     textAlign: "center",
                     position: "relative",
@@ -23,10 +24,10 @@ export function Statement() {
                     <p
                         style={{
                             fontFamily: T.font.display,
-                            fontSize: "clamp(28px, 3.2vw, 44px)",
-                            fontWeight: 700,
-                            lineHeight: 1.3,
-                            letterSpacing: "-0.03em",
+                            fontSize: T.type.quote.size,
+                            fontWeight: T.type.quote.weight,
+                            lineHeight: T.type.quote.leading,
+                            letterSpacing: T.type.quote.tracking,
                             color: "rgba(255,255,255,0.6)",
                         }}
                     >
@@ -39,17 +40,17 @@ export function Statement() {
                     </p>
                 </Reveal>
                 <Reveal delay={0.15}>
-                    <div style={{ marginTop: 44 }}>
+                    <div style={{ marginTop: T.space.lg - 4 }}>
                         <a
                             href="#books"
                             style={{
                                 fontFamily: T.font.body,
-                                fontSize: 14,
+                                fontSize: T.type.bodySmall.size,
                                 fontWeight: 600,
                                 color: "rgba(255,255,255,0.5)",
                                 display: "inline-flex",
                                 alignItems: "center",
-                                gap: 8,
+                                gap: T.space.xs,
                                 textDecoration: "none",
                                 transition: `color 0.3s ${T.ease}`,
                             }}

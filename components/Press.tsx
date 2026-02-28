@@ -1,14 +1,8 @@
 import { useState } from "react";
 import { T, ASSETS } from "./tokens";
-import { Reveal, Tag, H2, Arr } from "./ui";
+import { Reveal, Arr, Section, SectionHead, Grid } from "./ui";
 
-function PressCard({
-    p,
-    i,
-}: {
-    p: (typeof ASSETS.press)[0];
-    i: number;
-}) {
+function PressCard({ p, i }: { p: (typeof ASSETS.press)[0]; i: number }) {
     const [hov, setHov] = useState(false);
     return (
         <Reveal delay={i * 0.08}>
@@ -47,7 +41,7 @@ function PressCard({
                 </div>
                 <div
                     style={{
-                        marginTop: 14,
+                        marginTop: T.type.bodySmall.size,
                         display: "flex",
                         justifyContent: "space-between",
                         alignItems: "center",
@@ -57,11 +51,11 @@ function PressCard({
                         <span
                             style={{
                                 fontFamily: T.font.body,
-                                fontSize: 13.5,
-                                fontWeight: 600,
+                                fontSize: T.type.caption.size + 0.5,
+                                fontWeight: T.type.caption.weight,
                                 color: T.text,
                                 display: "block",
-                                letterSpacing: "-0.01em",
+                                letterSpacing: T.type.caption.tracking,
                             }}
                         >
                             {p.label}
@@ -69,7 +63,7 @@ function PressCard({
                         <span
                             style={{
                                 fontFamily: T.font.body,
-                                fontSize: 11.5,
+                                fontSize: T.type.label.size,
                                 color: T.textTertiary,
                                 letterSpacing: "0.02em",
                                 textTransform: "uppercase",
@@ -87,31 +81,13 @@ function PressCard({
 
 export function Press() {
     return (
-        <section
-            id="media"
-            style={{
-                padding: `80px ${T.space.page}px ${T.space.section}px`,
-                maxWidth: T.space.maxW,
-                margin: "0 auto",
-            }}
-        >
-            <Reveal>
-                <Tag>In the media</Tag>
-                <H2 size={52} style={{ marginTop: 12, marginBottom: 48 }}>
-                    Media + Features.
-                </H2>
-            </Reveal>
-            <div
-                style={{
-                    display: "grid",
-                    gridTemplateColumns: "repeat(4, 1fr)",
-                    gap: T.space.sm + 4,
-                }}
-            >
+        <Section id="media" compact className="press">
+            <SectionHead tag="In the media" heading="Media + Features." />
+            <Grid cols={4} className="press-grid">
                 {ASSETS.press.map((p, i) => (
                     <PressCard key={i} p={p} i={i} />
                 ))}
-            </div>
-        </section>
+            </Grid>
+        </Section>
     );
 }

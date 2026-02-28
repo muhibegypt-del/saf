@@ -4,48 +4,70 @@
    ═══════════════════════════════════════════════════════════════ */
 
 export const T = {
-  // Colors
-  bg: "#FDFBF7",         // Warm Cream / Off-White
-  surface: "#FFFFFF",    // White (Cards)
-  dark: "#141413",       // Near-Black (Warm)
-  darkSoft: "#1F1E1D",   // Soft Black
-  text: "#1C1B1A",       // Body Text
-  textSecondary: "#6F6D66", // Warm Grey
-  textTertiary: "#A3A098", // Stone Grey
-  border: "#E6E2DD",     // Tan / Beige
-  borderHover: "#D1CDC7", // Darker Tan
-  borderStrong: "#C2BEB7", // Strong Structure
-  accent: "#CC6842",     // Deep Terracotta (Warm/Earthy)
-  accentSoft: "#F2E8E3", // Soft Blush / Peachy-Pink (Backgrounds)
+  // ── Colors ──────────────────────────────────────────
+  bg: "#FDFBF7",
+  surface: "#FFFFFF",
+  dark: "#141413",
+  darkSoft: "#1F1E1D",
+  text: "#1C1B1A",
+  textSecondary: "#6F6D66",
+  textTertiary: "#A3A098",
+  border: "#E6E2DD",
+  borderHover: "#D1CDC7",
+  borderStrong: "#C2BEB7",
+  accent: "#CC6842",
+  accentSoft: "#F2E8E3",
 
-  // Radii
-  radius: {
-    sm: 12,
-    md: 16,
-    lg: 24,
-    xl: 32,
-    full: 9999,
-  },
+  // ── Radii ───────────────────────────────────────────
+  radius: { sm: 12, md: 16, lg: 24, xl: 32, full: 9999 },
 
-  // Typography
+  // ── Typography ──────────────────────────────────────
   font: {
     display: "'Satoshi', 'SF Pro Display', -apple-system, sans-serif",
     body: "'Switzer', 'SF Pro Text', -apple-system, sans-serif",
   },
+  type: {
+    h1:      { size: "clamp(46px, 5vw, 72px)", weight: 800, leading: 1.04, tracking: "-0.045em" },
+    h2:      { size: "clamp(32px, 3.7vw, 52px)", weight: 700, leading: 1.08, tracking: "-0.035em" },
+    h3:      { size: 20, weight: 700, leading: 1.2, tracking: "-0.03em" },
+    quote:   { size: "clamp(28px, 3.2vw, 44px)", weight: 700, leading: 1.3, tracking: "-0.03em" },
+    body:    { size: 16, weight: 400, leading: 1.75, tracking: "-0.01em" },
+    bodySmall: { size: 14, weight: 400, leading: 1.65, tracking: "-0.005em" },
+    caption: { size: 13, weight: 600, leading: 1.4, tracking: "-0.01em" },
+    label:   { size: 11.5, weight: 600, leading: 1.2, tracking: "0.12em" },
+    small:   { size: 12.5, weight: 500, leading: 1.4, tracking: "-0.005em" },
+  },
 
-  // Spacing
+  // ── Spacing (semantic) ──────────────────────────────
   space: {
     xs: 8,
     sm: 16,
     md: 24,
     lg: 48,
     xl: 80,
-    section: 120,
-    page: 48,      // horizontal page gutter
-    maxW: 1360,    // content max-width
+    section: 120,       // vertical padding for full sections
+    sectionSm: 80,      // vertical padding for compact sections
+    page: 48,            // horizontal page gutter
+    pageMobile: 20,      // horizontal gutter on mobile
+    pageXs: 16,          // horizontal gutter on small mobile
+    maxW: 1360,          // content max-width
+    cardPad: 24,         // card content padding
+    cardGap: 20,         // gap between card grid items
+    tagGap: 12,          // gap between tag and heading
+    headingGap: 48,      // gap between section heading and content
+    prose: 640,          // max-width for body text paragraphs
+    proseWide: 900,      // max-width for wide text blocks
   },
 
-  // Easing
+  // ── Breakpoints ─────────────────────────────────────
+  bp: {
+    sm: 480,
+    md: 768,
+    lg: 1024,
+    xl: 1280,
+  },
+
+  // ── Easing ──────────────────────────────────────────
   ease: "cubic-bezier(0.22, 1, 0.36, 1)",
   easeOut: "cubic-bezier(0.16, 1, 0.3, 1)",
 } as const;
