@@ -78,7 +78,7 @@ export const T = {
    ═══════════════════════════════════════════════════════════════ */
 
 export const ASSETS = {
-  heroPhoto: "https://i0.wp.com/sacredfootsteps.com/wp-content/uploads/2024/08/IMG_0942-scaled.jpeg?fit=1920%2C2560&ssl=1",
+  heroPhoto: "/WhatsApp_Image_2026-02-10_at_10.31.15_PM_(1).jpeg",
   logos: [
     { name: "Harvard University", url: "/logos/harvard.svg" },
     { name: "Yale University", url: "/logos/yale.svg" },

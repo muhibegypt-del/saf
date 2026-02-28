@@ -140,7 +140,9 @@ export function Hero() {
                                 width: "100%",
                                 height: "100%",
                                 objectFit: "cover",
+                                objectPosition: "center 20%",
                                 display: "block",
+                                transform: "scale(1.15)",
                             }}
                         />
                     </div>
