@@ -38,9 +38,9 @@ export function About() {
                             advanced studies in Islamic sciences at Al-Azhar University
                             in Cairo. Alongside formal study, he has trained with scholars
                             across Africa and the Middle East, receiving multiple ij&#257;z&#257;t
-                            in classical Islamic disciplines, including Muhammad al-Hafiz
-                            al-Nahwi, President of the Islamic Cultural Forum of Mauritania
-                            and West Africa, and Sharif Ibrahim Saleh al-Husseini, Grand
+                            in classical Islamic disciplines, including Shaykh Muhammad
+                            al-Hafiz al-Nahwi, President of the Islamic Cultural Forum of
+                            Mauritania, and Shaykh Sharif Ibrahim Saleh al-Husseini, Grand
                             Mufti and Chairman of the Supreme Council for Fatwa and Islamic
                             Affairs in Nigeria.
                         </Prose>
