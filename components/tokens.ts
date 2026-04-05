@@ -140,4 +140,5 @@ export const NAV_LINKS = [
   { label: "Books", href: "#books" },
   { label: "Speaking", href: "#speaking" },
   { label: "Media", href: "#media" },
+  { label: "Umrah", href: "/umrah" },
 ];
