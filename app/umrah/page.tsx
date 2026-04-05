@@ -335,7 +335,7 @@ function PricingSection({ plans: planData }: { plans: typeof plans }) {
         <Reveal>
           <div style={{ textAlign: 'center', marginBottom: '2rem', maxWidth: '800px', margin: '0 auto 3rem' }}>
             <p style={{ fontSize: '1.05rem', lineHeight: '1.8', color: 'var(--charcoal-light)', marginBottom: '2.5rem' }}>
-              This is more than an Umrah trip; it&rsquo;s a once-in-a-lifetime scholarly pilgrimage. Intimate class sizes, world-renowned guidance, premium accommodations steps from the Haram, and transformative lessons woven into every sacred site. An experience that typically costs upwards of $8,000 elsewhere, made accessible through our commitment to spreading sacred knowledge.
+              This is more than an Umrah trip; it&rsquo;s a once-in-a-lifetime scholarly pilgrimage. Intimate class sizes, world-renowned guidance, premium accommodations steps from the Haram, and transformative lessons woven into every sacred site.
             </p>
             <p className="u-price-amount"><span>$</span>4,500</p>
             <p className="u-price-note">Complete all-inclusive package per person</p>
