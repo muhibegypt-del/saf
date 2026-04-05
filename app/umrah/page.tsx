@@ -339,7 +339,7 @@ function PricingSection({ plans: planData }: { plans: typeof plans }) {
             </p>
             <p className="u-price-amount"><span>$</span>4,500</p>
             <p className="u-price-note">Complete all-inclusive package per person</p>
-            <div className="u-price-deposit">Reserve your place with just $500 today</div>
+            <div className="u-price-deposit">Reserve your place with just a deposit today</div>
           </div>
         </Reveal>
 
