@@ -314,7 +314,8 @@ function ScholarSection() {
             <div className="u-guest-info">
               <h3>Shaykh Zakariya Abdul Aziz</h3>
               <p className="u-guest-role">Distinguished Guest Lecturer</p>
-              <p>Shaykh Zakariya Abdul Aziz joins us as an honored guest lecturer, bringing his extraordinary depth of scholarship and profound spiritual insight to magnificently enrich the journey. His inspiring sessions will beautifully complement the core programme, offering fresh, illuminating perspectives on the Seerah and the vibrant, living tradition of Islamic knowledge.</p>
+              <p>Shaykh Zakaria is a distinguished graduate with honours from the esteemed Alimiyyah program at Dar al-Mustafa in Tarim, Yemen. This was preceded by seven intensive years of classical training in both the transmitted and rational sciences of the Islamic tradition.</p>
+              <p style={{ marginTop: '1rem' }}>He holds authorizations in Qur&rsquo;anic recitations, hadith transmission and methodology, and Shafi&rsquo;i jurisprudence. Shaykh Zakaria is also qualified to teach a wide range of Islamic and linguistic sciences. These include Qur&rsquo;anic exegesis, ethics, legal theory, scholastic theology, logic, dialectics, Arabic morphology, grammar, rhetoric, and literature.</p>
             </div>
           </Reveal>
         </div>
