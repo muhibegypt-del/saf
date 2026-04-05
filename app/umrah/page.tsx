@@ -271,7 +271,7 @@ function ItinerarySection() {
 
         <Reveal delay={100}>
           <p className="u-itinerary-intro">
-            Our journey follows a deeply intentional path &mdash; beginning where the Prophet &#xFDFA; made his home, where revelation descended, and where love for him is nurtured through closeness to his blessed mosque. Only then, with hearts prepared and spirits illuminated, do we travel onward to perform our Umrah in the sacred precincts of Makkah.
+            Our journey follows a deeply intentional path — beginning where the Prophet &#xFDFA; made his home, where revelation descended, and where love for him is nurtured through closeness to his blessed mosque. Only then, with hearts prepared and spirits illuminated, do we travel onward to perform our Umrah in the sacred precincts of Makkah.
           </p>
         </Reveal>
 
@@ -290,7 +290,7 @@ function ItinerarySection() {
                 <p className="u-itinerary-meaning">The Radiant City</p>
               </div>
               <div className="u-itinerary-card-body">
-                <p>Begin in the city of the Prophet &#xFDFA; &mdash; where the heart is softened, knowledge takes root, and the soul finds its rhythm before the sacred rites.</p>
+                <p>Begin in the city of the Prophet &#xFDFA; — where the heart is softened, knowledge takes root, and the soul finds its rhythm before the sacred rites.</p>
                 <ul>
                   <li>Dar Al-Hijra Intercontinental</li>
                   <li>Daily Seerah sessions in a private venue</li>
@@ -322,7 +322,7 @@ function ItinerarySection() {
                 <p className="u-itinerary-meaning">The Honoured City</p>
               </div>
               <div className="u-itinerary-card-body">
-                <p>Arrive with a heart already awakened &mdash; ready to stand before the Ka&rsquo;bah, perform your Umrah, and complete this transformative journey in the holiest of places.</p>
+                <p>Arrive with a heart already awakened — ready to stand before the Ka&rsquo;bah, perform your Umrah, and complete this transformative journey in the holiest of places.</p>
                 <ul>
                   <li>Jumeirah Jabal Omar</li>
                   <li>Umrah rites with scholarly guidance</li>
