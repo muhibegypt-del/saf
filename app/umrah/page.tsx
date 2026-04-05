@@ -63,6 +63,7 @@ export default function UmrahPage() {
         <QuoteBand />
         <TextOfStudySection />
         <JourneySection />
+        <ItinerarySection />
         <TestimonialSection />
         <ScholarSection />
         <PricingSection plans={plans} />
@@ -70,7 +71,7 @@ export default function UmrahPage() {
         <CtaSection />
 
         <footer className="u-footer">
-          <p style={{ marginBottom: '0.5rem' }}>Umrah with Mustafa Briggs &middot; November 20-29, 2026</p>
+          <p style={{ marginBottom: '0.5rem' }}>Umrah with Mustafa Briggs &middot; Madinah &amp; Makkah &middot; November 20-29, 2026</p>
           <p>&copy; 2026 All rights reserved</p>
         </footer>
 
@@ -95,7 +96,7 @@ function HeroSection() {
       <div className="u-grain" style={{ zIndex: 3 }} />
       <div className="u-pattern-overlay" style={{ zIndex: 4 }} />
       <div className="u-hero-content">
-        <p className="u-hero-eyebrow">November 20-29, 2026 &middot; Makkah &amp; Madinah</p>
+        <p className="u-hero-eyebrow">November 20-29, 2026 &middot; Madinah &amp; Makkah</p>
         <h1 className="u-hero-title">
           <span className="u-hero-title-leading">Umrah with</span>
           <em>Shaykh Mustafa Briggs</em>
@@ -126,7 +127,7 @@ function ExperienceSection() {
           <Reveal className="u-exp-card" delay={0}>
             <svg className="u-exp-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
             <h3>Exquisite Accommodation</h3>
-            <p>Luxurious stays at the prestigious Jumeirah Jabal Omar in Makkah (3 nights) and the distinguished Dar Al-Hijra Intercontinental in Madinah (5 nights), with gourmet daily breakfast to nourish body and soul.</p>
+            <p>Luxurious stays at the distinguished Dar Al-Hijra Intercontinental in Madinah (5 nights) and the prestigious Jumeirah Jabal Omar in Makkah (3 nights), with gourmet daily breakfast to nourish body and soul.</p>
           </Reveal>
           <Reveal className="u-exp-card" delay={150}>
             <svg className="u-exp-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" /><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" /></svg>
@@ -252,6 +253,93 @@ function JourneySection() {
             </Reveal>
           ))}
         </div>
+      </div>
+    </section>
+  );
+}
+
+function ItinerarySection() {
+  return (
+    <section className="u-itinerary">
+      <div className="u-pattern-overlay" />
+      <div className="u-grain" style={{ opacity: 0.2 }} />
+      <div className="u-itinerary-inner">
+        <Reveal className="u-section-header">
+          <p className="u-itinerary-eyebrow">Your Sacred Path</p>
+          <h2 className="u-itinerary-title">From the City of the Prophet <span className="u-itinerary-saws">&#xFDFA;</span> to the House of Allah</h2>
+        </Reveal>
+
+        <Reveal delay={100}>
+          <p className="u-itinerary-intro">
+            Our journey follows a deeply intentional path &mdash; beginning where the Prophet &#xFDFA; made his home, where revelation descended, and where love for him is nurtured through closeness to his blessed mosque. Only then, with hearts prepared and spirits illuminated, do we travel onward to perform our Umrah in the sacred precincts of Makkah.
+          </p>
+        </Reveal>
+
+        <div className="u-itinerary-path">
+          <div className="u-itinerary-line" />
+
+          <Reveal className="u-itinerary-stop" delay={200}>
+            <div className="u-itinerary-marker">
+              <div className="u-itinerary-dot u-itinerary-dot--active" />
+              <span className="u-itinerary-phase">Phase One</span>
+            </div>
+            <div className="u-itinerary-card">
+              <div className="u-itinerary-card-header">
+                <span className="u-itinerary-nights">5 Nights</span>
+                <h3>Madinah al-Munawwarah</h3>
+                <p className="u-itinerary-meaning">The Radiant City</p>
+              </div>
+              <div className="u-itinerary-card-body">
+                <p>Begin in the city of the Prophet &#xFDFA; &mdash; where the heart is softened, knowledge takes root, and the soul finds its rhythm before the sacred rites.</p>
+                <ul>
+                  <li>Dar Al-Hijra Intercontinental</li>
+                  <li>Daily Seerah sessions in a private venue</li>
+                  <li>Visits to sacred historical sites</li>
+                  <li>Rawdah group booking (subject to availability)</li>
+                </ul>
+              </div>
+            </div>
+          </Reveal>
+
+          <Reveal className="u-itinerary-travel" delay={350}>
+            <div className="u-itinerary-travel-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </div>
+            <p className="u-itinerary-travel-label">Business-Class Train to Makkah</p>
+          </Reveal>
+
+          <Reveal className="u-itinerary-stop" delay={500}>
+            <div className="u-itinerary-marker">
+              <div className="u-itinerary-dot" />
+              <span className="u-itinerary-phase">Phase Two</span>
+            </div>
+            <div className="u-itinerary-card">
+              <div className="u-itinerary-card-header">
+                <span className="u-itinerary-nights">3 Nights</span>
+                <h3>Makkah al-Mukarramah</h3>
+                <p className="u-itinerary-meaning">The Honoured City</p>
+              </div>
+              <div className="u-itinerary-card-body">
+                <p>Arrive with a heart already awakened &mdash; ready to stand before the Ka&rsquo;bah, perform your Umrah, and complete this transformative journey in the holiest of places.</p>
+                <ul>
+                  <li>Jumeirah Jabal Omar</li>
+                  <li>Umrah rites with scholarly guidance</li>
+                  <li>Continued Seerah sessions</li>
+                  <li>Dedicated SUV &amp; full concierge support</li>
+                </ul>
+              </div>
+            </div>
+          </Reveal>
+        </div>
+
+        <Reveal delay={600}>
+          <div className="u-itinerary-wisdom">
+            <div className="u-itinerary-wisdom-mark">&ldquo;</div>
+            <p>By beginning in Madinah, we prepare the heart before the body. The knowledge, devotion, and love cultivated at the Prophet&rsquo;s &#xFDFA; mosque becomes the spiritual foundation upon which your Umrah is built.</p>
+          </div>
+        </Reveal>
       </div>
     </section>
   );
