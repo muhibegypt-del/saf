@@ -3,7 +3,7 @@
 import { useState, useEffect, useCallback } from "react";
 import { Reveal, JourneyIcon } from "./umrah-components";
 import { plans, journeyItems, faqs, navItems } from "./umrah-data";
-import { umrahStyles } from "./umrah-styles";
+import "./umrah.css";
 
 export default function UmrahPage() {
   const [navScrolled, setNavScrolled] = useState(false);
@@ -31,8 +31,6 @@ export default function UmrahPage() {
 
   return (
     <>
-      <style>{umrahStyles}</style>
-
       <div className="u-page" style={{ minHeight: '100vh' }}>
         <a href="#experience" className="u-skip-link">Skip to content</a>
 
