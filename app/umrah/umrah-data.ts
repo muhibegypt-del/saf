@@ -14,7 +14,7 @@ export const journeyItems = [
 
 export const faqs = [
   { q: 'What is included in the package?', a: 'The package includes: 3 nights at Jumeirah Jabal Omar (Makkah) and 5 nights at Dar Al-Hijra Intercontinental (Madinah), daily breakfast, comprehensive ground transfers, business class train to Makkah and airport, dedicated SUV, one-year multiple-entry Umrah visa, exclusive venue for classes, Rawdah group booking (subject to availability), ihram and prayer garments, tailored itinerary, and dedicated Khuta staff on site throughout the journey.' },
-  { q: 'How do I secure my spot?', a: 'Send the word "UMRAH" via WhatsApp to begin the registration process. A $500 non-refundable deposit will secure your place in the group.' },
+  { q: 'How do I secure my spot?', a: 'Fill in the application form and share with us your answers to our questions. A $500 non-refundable deposit will secure your place in the group.' },
   { q: 'Are flights included?', a: 'Flights are not included in the package price. The cost covers accommodation, ground transportation, train tickets (Madina \u21C4 Makkah), breakfast, visa, and program coordination.' },
   { q: 'When does the trip take place?', a: 'The journey takes place during Thanksgiving Break 2026 (end of November).' },
   { q: 'Do I need prior Islamic knowledge?', a: 'Not at all. The program is designed to meet you where you are. Whether beginning your journey or deepening existing knowledge, every session is accessible and enriching.' },
