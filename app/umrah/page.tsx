@@ -428,26 +428,32 @@ function PricingSection({ plans: planData }: { plans: typeof plans }) {
             </p>
             <p className="u-price-amount"><span>$</span>4,500</p>
             <p className="u-price-note">Complete all-inclusive package per person</p>
-            <div className="u-price-deposit">Reserve your place with just a deposit today</div>
+            <div className="u-price-deposit">$1,000 deposit secures your place</div>
           </div>
         </Reveal>
 
         <Reveal>
           <p style={{ textAlign: 'center', fontSize: '0.75rem', letterSpacing: '0.2em', textTransform: 'uppercase' as const, color: 'var(--charcoal-muted)', marginBottom: '2rem', fontWeight: 500 }}>
-            Flexible Payment Plans
+            After Your Deposit &mdash; Choose A Plan
           </p>
         </Reveal>
 
         <div className="u-plans-grid">
           {planData.map((plan, i) => (
             <Reveal key={i} className={`u-plan ${plan.featured ? 'featured' : ''}`} delay={i * 120}>
-              {plan.badge && <div className="u-plan-badge">{plan.badge}</div>}
               <p className="u-plan-name" style={plan.featured ? { color: 'var(--ivory)' } : undefined}>{plan.name}</p>
               <p className="u-plan-price">{plan.price}</p>
               <p className="u-plan-period">{plan.period}</p>
             </Reveal>
           ))}
         </div>
+
+        <Reveal delay={200}>
+          <aside className="u-finance-note" aria-label="Financial support option">
+            <p className="u-finance-note-eyebrow">Financial Support Option</p>
+            <p className="u-finance-note-text">5 &amp; 6-month payment plans available upon request.</p>
+          </aside>
+        </Reveal>
       </div>
     </section>
   );
