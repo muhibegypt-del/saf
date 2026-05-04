@@ -1,14 +1,8 @@
 import { useState } from "react";
 import { T, BOOKS } from "./tokens";
-import { Reveal, Tag, H2, Arr } from "./ui";
+import { Reveal, Arr, Section, SectionHead, Grid } from "./ui";
 
-function BookCard({
-    b,
-    i,
-}: {
-    b: (typeof BOOKS)[0];
-    i: number;
-}) {
+function BookCard({ b, i }: { b: (typeof BOOKS)[0]; i: number }) {
     const [hov, setHov] = useState(false);
     return (
         <Reveal delay={i * 0.1}>
@@ -31,9 +25,9 @@ function BookCard({
                     cursor: "pointer",
                     position: "relative",
                     overflow: "hidden",
+                    height: "100%",
                 }}
             >
-                {/* Book cover image */}
                 <div
                     style={{
                         width: "100%",
@@ -58,10 +52,10 @@ function BookCard({
                         <span
                             style={{
                                 position: "absolute",
-                                top: 12,
-                                right: 12,
+                                top: T.space.tagGap,
+                                right: T.space.tagGap,
                                 fontFamily: T.font.body,
-                                fontSize: 11,
+                                fontSize: T.type.label.size - 0.5,
                                 fontWeight: 700,
                                 letterSpacing: "0.04em",
                                 textTransform: "uppercase",
@@ -75,17 +69,16 @@ function BookCard({
                         </span>
                     )}
                 </div>
-                {/* Book details */}
-                <div style={{ padding: "24px 24px 28px" }}>
+                <div style={{ padding: T.space.cardPad, paddingBottom: T.space.cardPad + 4 }}>
                     <h3
                         style={{
                             fontFamily: T.font.display,
-                            fontSize: 20,
-                            fontWeight: 700,
-                            letterSpacing: "-0.03em",
+                            fontSize: T.type.h3.size,
+                            fontWeight: T.type.h3.weight,
+                            letterSpacing: T.type.h3.tracking,
+                            lineHeight: T.type.h3.leading,
                             color: T.text,
                             marginBottom: 10,
-                            lineHeight: 1.2,
                         }}
                     >
                         {b.title}
@@ -93,11 +86,11 @@ function BookCard({
                     <p
                         style={{
                             fontFamily: T.font.body,
-                            fontSize: 13.5,
-                            lineHeight: 1.65,
+                            fontSize: T.type.bodySmall.size - 0.5,
+                            lineHeight: T.type.bodySmall.leading,
                             color: T.textSecondary,
-                            letterSpacing: "-0.005em",
-                            marginBottom: 20,
+                            letterSpacing: T.type.bodySmall.tracking,
+                            marginBottom: T.space.cardGap,
                         }}
                     >
                         {b.desc}
@@ -113,10 +106,10 @@ function BookCard({
                         <span
                             style={{
                                 fontFamily: T.font.body,
-                                fontSize: 13,
-                                fontWeight: 600,
+                                fontSize: T.type.caption.size,
+                                fontWeight: T.type.caption.weight,
                                 color: T.accent,
-                                letterSpacing: "-0.01em",
+                                letterSpacing: T.type.caption.tracking,
                             }}
                         >
                             {b.cta}
@@ -131,31 +124,13 @@ function BookCard({
 
 export function Services() {
     return (
-        <section
-            id="books"
-            style={{
-                padding: `${T.space.section}px ${T.space.page}px`,
-                maxWidth: T.space.maxW,
-                margin: "0 auto",
-            }}
-        >
-            <Reveal>
-                <Tag>Published Works</Tag>
-                <H2 size={52} style={{ marginTop: 12, marginBottom: 60 }}>
-                    Books + Publications.
-                </H2>
-            </Reveal>
-            <div
-                style={{
-                    display: "grid",
-                    gridTemplateColumns: "repeat(4, 1fr)",
-                    gap: T.space.sm + 4,
-                }}
-            >
+        <Section id="books" className="books">
+            <SectionHead tag="Published Works" heading="Books + Publications." />
+            <Grid cols={3} className="books-grid">
                 {BOOKS.map((b, i) => (
                     <BookCard key={i} b={b} i={i} />
                 ))}
-            </div>
-        </section>
+            </Grid>
+        </Section>
     );
 }

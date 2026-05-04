@@ -2,6 +2,8 @@ import { useRef, useState } from "react";
 import { T } from "./tokens";
 import { useReveal, useMagnetic, useScrollProgress } from "./hooks";
 
+/* ═══ REVEAL — scroll-triggered entrance ═══ */
+
 export const Reveal = ({
     children,
     delay = 0,
@@ -30,6 +32,8 @@ export const Reveal = ({
     );
 };
 
+/* ═══ TAG — uppercase accent label ═══ */
+
 export const Tag = ({
     children,
     style = {},
@@ -40,9 +44,10 @@ export const Tag = ({
     <span
         style={{
             fontFamily: T.font.body,
-            fontSize: 11.5,
-            fontWeight: 600,
-            letterSpacing: "0.12em",
+            fontSize: T.type.label.size,
+            fontWeight: T.type.label.weight,
+            letterSpacing: T.type.label.tracking,
+            lineHeight: T.type.label.leading,
             textTransform: "uppercase",
             color: T.accent,
             ...style,
@@ -52,22 +57,22 @@ export const Tag = ({
     </span>
 );
 
+/* ═══ H2 — section heading ═══ */
+
 export const H2 = ({
     children,
-    size = 48,
     style = {},
 }: {
     children: React.ReactNode;
-    size?: number;
     style?: React.CSSProperties;
 }) => (
     <h2
         style={{
             fontFamily: T.font.display,
-            fontSize: `clamp(${size * 0.65}px, ${size / 14}vw, ${size}px)`,
-            fontWeight: 700,
-            letterSpacing: "-0.035em",
-            lineHeight: 1.08,
+            fontSize: T.type.h2.size,
+            fontWeight: T.type.h2.weight,
+            letterSpacing: T.type.h2.tracking,
+            lineHeight: T.type.h2.leading,
             color: T.text,
             ...style,
         }}
@@ -75,6 +80,115 @@ export const H2 = ({
         {children}
     </h2>
 );
+
+/* ═══ SECTION HEAD — Tag + H2 with consistent spacing ═══ */
+
+export const SectionHead = ({
+    tag,
+    heading,
+    style = {},
+}: {
+    tag: string;
+    heading: string;
+    style?: React.CSSProperties;
+}) => (
+    <Reveal>
+        <div style={style}>
+            <Tag>{tag}</Tag>
+            <H2 style={{ marginTop: T.space.tagGap, marginBottom: T.space.headingGap }}>
+                {heading}
+            </H2>
+        </div>
+    </Reveal>
+);
+
+/* ═══ SECTION — consistent section wrapper ═══ */
+
+export const Section = ({
+    children,
+    id,
+    bg,
+    compact = false,
+    fullWidth = false,
+    className,
+    style = {},
+}: {
+    children: React.ReactNode;
+    id?: string;
+    bg?: string;
+    compact?: boolean;
+    fullWidth?: boolean;
+    className?: string;
+    style?: React.CSSProperties;
+}) => (
+    <section
+        id={id}
+        className={className}
+        style={{
+            padding: `${compact ? T.space.sectionSm : T.space.section}px ${T.space.page}px`,
+            background: bg,
+            ...(fullWidth ? {} : { maxWidth: T.space.maxW, margin: "0 auto" }),
+            ...style,
+        }}
+    >
+        {children}
+    </section>
+);
+
+/* ═══ PROSE — body text with max-width ═══ */
+
+export const Prose = ({
+    children,
+    style = {},
+}: {
+    children: React.ReactNode;
+    style?: React.CSSProperties;
+}) => (
+    <p
+        style={{
+            fontFamily: T.font.body,
+            fontSize: T.type.body.size,
+            lineHeight: T.type.body.leading,
+            letterSpacing: T.type.body.tracking,
+            color: T.textSecondary,
+            maxWidth: T.space.prose,
+            marginBottom: T.space.cardGap,
+            ...style,
+        }}
+    >
+        {children}
+    </p>
+);
+
+/* ═══ GRID — consistent grid layout ═══ */
+
+export const Grid = ({
+    children,
+    cols = 3,
+    gap,
+    className,
+    style = {},
+}: {
+    children: React.ReactNode;
+    cols?: number;
+    gap?: number;
+    className?: string;
+    style?: React.CSSProperties;
+}) => (
+    <div
+        className={className}
+        style={{
+            display: "grid",
+            gridTemplateColumns: `repeat(${cols}, 1fr)`,
+            gap: gap ?? T.space.cardGap,
+            ...style,
+        }}
+    >
+        {children}
+    </div>
+);
+
+/* ═══ ARR — arrow icon ═══ */
 
 export const Arr = ({
     size = 15,
@@ -97,6 +211,8 @@ export const Arr = ({
     </svg>
 );
 
+/* ═══ BTN — magnetic button ═══ */
+
 export function Btn({
     children,
     href,
@@ -118,12 +234,12 @@ export function Btn({
             style={{
                 display: "inline-flex",
                 alignItems: "center",
-                gap: 8,
-                padding: "14px 28px",
+                gap: T.space.xs,
+                padding: `${T.type.bodySmall.size}px ${T.space.md + 4}px`,
                 borderRadius: T.radius.full,
                 textDecoration: "none",
                 fontFamily: T.font.body,
-                fontSize: 14,
+                fontSize: T.type.bodySmall.size,
                 fontWeight: 600,
                 letterSpacing: "-0.01em",
                 background: dark ? T.dark : "transparent",
@@ -139,6 +255,8 @@ export function Btn({
         </a>
     );
 }
+
+/* ═══ SCROLL PROGRESS ═══ */
 
 export function ScrollProgress() {
     const progress = useScrollProgress();

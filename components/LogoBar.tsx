@@ -27,9 +27,10 @@ export function LogoBar() {
     return (
         <section
             id="speaking"
+            className="logo-bar"
             ref={ref}
             style={{
-                padding: "44px 0",
+                padding: `${T.space.lg - 4}px 0`,
                 borderTop: `1px solid ${T.borderStrong}`,
                 borderBottom: `1px solid ${T.borderStrong}`,
                 background: T.surface,
@@ -41,18 +42,19 @@ export function LogoBar() {
             <p
                 style={{
                     fontFamily: T.font.body,
-                    fontSize: 11.5,
-                    fontWeight: 600,
-                    letterSpacing: "0.12em",
+                    fontSize: T.type.label.size,
+                    fontWeight: T.type.label.weight,
+                    letterSpacing: T.type.label.tracking,
                     textTransform: "uppercase",
                     color: T.accent,
                     textAlign: "center",
-                    marginBottom: 24,
+                    marginBottom: T.space.md,
                 }}
             >
                 Lectured at 50+ universities across 3 continents
             </p>
             <div
+                className="logo-track"
                 style={{
                     display: "flex",
                     alignItems: "center",
